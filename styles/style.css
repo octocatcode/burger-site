@@ -14,9 +14,14 @@
 }
 
 body {
+    overflow: hidden;
     background-color: #191411;
     font-family: 'Gilroy', sans-serif;
     color: white;
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
 
 .container {
@@ -344,7 +349,8 @@ body {
     line-height: 20px;
 }
 
-#welcome-overlay {
+
+#welcome-overlay, #order-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -367,7 +373,7 @@ body {
     }
 }
 
-#welcome-box {
+#welcome-box, #order-overlay-box {
     background-color: #000000e7;
     padding: 20px;
     display: flex;
@@ -388,4 +394,25 @@ body {
 
 #close-button .button {
     margin-top: 10px;
+}
+
+#order-overlay {
+    display: none;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay-text, .overlay-image {
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 32px;
+    font-style: normal;
+    padding-bottom: 20px;
 }
